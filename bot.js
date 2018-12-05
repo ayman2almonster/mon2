@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "!";
-var adminprefix = '!'
-const developers = ["355126496169426945"]
+var prefix = "-";
+var adminprefix = '-'
+const developers = ["444899952397647883"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -22,7 +22,7 @@ client.on('message', message => {
   client.user.setActivity(argresult , {type:'LISTENING'});
       message.channel.send(`LastCodes   ${argresult}**`)
   } else
-  if (message.content.startsWith(adminprefix + 'sets')) {
+  if (message.content.startsWith(adminprefix + 'am')) {
     client.user.setGame(argresult, "https://www.twitch.tv/One");
       message.channel.send(`LastCodes`)
   }
@@ -40,4 +40,4 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {
  
  
  
-client.login(process.env.BOT_TOKEN);// ·«  €Ì— ›ÌÂ« ‘Ì¡
+client.login(process.env.BOT_TOKEN);// √°√á √ä√õ√≠√ë √ù√≠√•√á √î√≠√Å
